@@ -10,8 +10,8 @@ namespace coup
 
         virtual std::string role(){return "Captain";}
 
-        void steal(Player&){}
-        void block(Player&){}
+        void steal(Player&);
+        void block(Player&);
     private:
 
     };

@@ -13,15 +13,20 @@ namespace coup
 
         std::vector<std::string> players() const;
         std::string turn();
-        Player* getPlayer(std::string);
+        std::string winner();
+        Player* getPlayer(const std::string&);
 
+        void coup(const std::string&);
+        void uncoup(const std::string&);
+
+        void advance();
+        void cancelTurn();
     private:
         friend class Player;
-
         void addPlayer(Player&);
-        void coup(std::string,std::string);
         std::vector<Player*> playersNames;
 
         int currentPlayer;
+        bool gameStarted;
     };
 } // namespace coup
